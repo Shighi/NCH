@@ -206,40 +206,45 @@ function initializeCounters() {
 // CAROUSEL INITIALIZATION
 // ========================================
 function initializeCarousels() {
-    // Testimonials Swiper
-    const testimonialsSwiper = new Swiper('.testimonials-slider', {
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
+    // Check if testimonials slider exists before initializing
+    const testimonialsSlider = document.querySelector('.testimonials-slider');
+    
+    if (testimonialsSlider) {
+        // Testimonials Swiper
+        const testimonialsSwiper = new Swiper('.testimonials-slider', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
             },
-            768: {
-                slidesPerView: 1,
-                spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            1024: {
-                slidesPerView: 1,
-                spaceBetween: 40,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-    });
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                },
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+    }
 }
 
 // ========================================
@@ -603,54 +608,8 @@ if (window.innerWidth > 1024) {
     initializeCursorEffect();
 }
 
-// ========================================
-// PRELOADER
-// ========================================
-function initializePreloader() {
-    const preloader = document.createElement('div');
-    preloader.id = 'preloader';
-    preloader.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #8B1538, #6B0F2A);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 99999;
-        transition: opacity 0.5s ease;
-    `;
-    
-    preloader.innerHTML = `
-        <div style="width: 80px; height: 80px; border: 5px solid rgba(212, 175, 55, 0.3); border-top: 5px solid #D4AF37; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-        <div style="color: white; margin-top: 2rem; font-size: 1.25rem; font-weight: 600;">Loading...</div>
-    `;
-    
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    document.body.appendChild(preloader);
-    
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            preloader.style.opacity = '0';
-            setTimeout(() => {
-                preloader.remove();
-            }, 500);
-        }, 500);
-    });
-}
-
-initializePreloader();
+// Preloader removed to prevent the loading animation that caused lag ⚠️
+// The preloader code was intentionally disabled. If you want to re-enable, restore the original function.
 
 // ========================================
 // FORM VALIDATION

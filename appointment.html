@@ -1,28 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Appointment - Nanyuki Cottage Hospital</title>
     <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32/8B1538/FFFFFF?text=NCH">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-    <div class="top-bar"><div class="container"><div class="top-bar-content"><div class="top-bar-left"><a href="tel:+254062203666" class="top-bar-link"><i class="fas fa-phone"></i><span>+254 (062) 203 666</span></a></div></div></div></div>
-    <nav class="navbar" id="navbar"><div class="container"><div class="nav-content"><a href="index.html" class="logo"><div class="logo-icon">NCH</div><div class="logo-text"><span class="logo-title">Nanyuki Cottage Hospital</span></div></a><div class="nav-links" id="navLinks"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><div class="nav-dropdown"><a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a></div><div class="nav-dropdown"><a href="departments.html" class="nav-link">Departments <i class="fas fa-chevron-down"></i></a></div><a href="contact.html" class="nav-link">Contact</a></div><button class="mobile-menu-toggle" id="mobileMenuToggle"><span></span><span></span><span></span></button></div></div></nav>
-    
-    <section class="page-header"><div class="page-header-background"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=80" alt="Appointment"><div class="page-header-overlay"></div></div><div class="container"><div class="page-header-content" data-aos="fade-up"><h1>Book Appointment</h1><div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Appointment</span></div></div></div></section>
-    
-    <section class="appointment-section"><div class="container"><div class="appointment-grid"><div class="appointment-info" data-aos="fade-right"><div class="section-label">Book Appointment</div><h2 class="section-title">Schedule Your Visit Today</h2><p class="appointment-text">Take the first step towards better health. Book an appointment with our specialists and experience compassionate, professional care.</p><div class="appointment-contact"><h4>Need Help?</h4><a href="tel:+254062203666" class="contact-link"><i class="fas fa-phone"></i><span>+254 (062) 203 666</span></a><a href="https://wa.me/254062203666" class="contact-link"><i class="fab fa-whatsapp"></i><span>WhatsApp Us</span></a></div></div><div class="appointment-form-container" data-aos="fade-left"><form class="appointment-form" id="appointmentForm"><div class="form-group"><label for="fullName">Full Name *</label><input type="text" id="fullName" name="fullName" required></div><div class="form-row"><div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" required></div><div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email"></div></div><div class="form-row"><div class="form-group"><label for="gender">Gender *</label><select id="gender" name="gender" required><option value="">Select Gender</option><option value="male">Male</option><option value="female">Female</option><option value="other">Other</option></select></div><div class="form-group"><label for="age">Age *</label><input type="number" id="age" name="age" min="1" max="120" required></div></div><div class="form-group"><label for="patientType">Patient Type *</label><select id="patientType" name="patientType" required><option value="">Select Type</option><option value="new">New Patient</option><option value="returning">Returning Patient</option></select></div><div class="form-group"><label for="department">Department *</label><select id="department" name="department" required><option value="">Select Department</option><option value="emergency">Emergency & Trauma Care</option><option value="maternity">Maternity & Children's Care</option><option value="surgery">Surgery & Endoscopy</option><option value="internal">Internal Medicine</option></select></div><div class="form-row"><div class="form-group"><label for="date">Preferred Date *</label><input type="date" id="date" name="date" required></div><div class="form-group"><label for="time">Preferred Time *</label><input type="time" id="time" name="time" required></div></div><div class="form-group"><label for="paymentMethod">Payment Method *</label><select id="paymentMethod" name="paymentMethod" required><option value="">Select Payment Method</option><option value="insurance">Insurance</option><option value="cash">Cash</option><option value="mpesa">M-Pesa</option></select></div><div class="form-group" id="mpesaGroup" style="display: none;"><label for="mpesaId">M-Pesa Transaction ID</label><input type="text" id="mpesaId" name="mpesaId"></div><div class="form-group"><label for="reason">Reason for Visit *</label><textarea id="reason" name="reason" rows="4" required></textarea></div><div class="form-disclaimer"><p><i class="fas fa-info-circle"></i> This appointment request does not guarantee confirmation until our team contacts you.</p></div><button type="submit" class="btn btn-primary btn-lg btn-block"><span>Submit Request</span><i class="fas fa-paper-plane"></i></button></form></div></div></div></section>
-    
-    <footer class="footer"><div class="container"><div class="footer-bottom"><div class="footer-bottom-content"><p>&copy; 2026 Nanyuki Cottage Hospital. All rights reserved.</p></div></div></div></footer>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left"><a href="tel:+254062203666" class="top-bar-link"><i
+                            class="fas fa-phone"></i><span>+254 (062) 203 666</span></a></div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content"><a href="index.html" class="logo">
+                    <div class="logo-icon">NCH</div>
+                    <div class="logo-text"><span class="logo-title">Nanyuki Cottage Hospital</span></div>
+                </a>
+                <div class="nav-links" id="navLinks"><a href="index.html" class="nav-link">Home</a><a href="about.html"
+                        class="nav-link">About</a>
+                    <div class="nav-dropdown"><a href="services.html" class="nav-link">Services <i
+                                class="fas fa-chevron-down"></i></a></div>
+                    <div class="nav-dropdown"><a href="departments.html" class="nav-link">Departments <i
+                                class="fas fa-chevron-down"></i></a></div><a href="contact.html"
+                        class="nav-link">Contact</a>
+                </div><button class="mobile-menu-toggle"
+                    id="mobileMenuToggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="page-header-background"><img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=80" alt="Appointment">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <h1>Book Appointment</h1>
+                <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Appointment</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="appointment-section">
+        <div class="container">
+            <div class="appointment-grid">
+                <div class="appointment-info" data-aos="fade-right">
+                    <div class="section-label">Book Appointment</div>
+                    <h2 class="section-title">Schedule Your Visit Today</h2>
+                    <p class="appointment-text">Take the first step towards better health. Book an appointment with our
+                        specialists and experience compassionate, professional care.</p>
+                    <div class="appointment-contact">
+                        <h4>Need Help?</h4><a href="tel:+254062203666" class="contact-link"><i
+                                class="fas fa-phone"></i><span>+254 (062) 203 666</span></a><a
+                            href="https://wa.me/254062203666" class="contact-link"><i
+                                class="fab fa-whatsapp"></i><span>WhatsApp Us</span></a>
+                    </div>
+                </div>
+                <div class="appointment-form-container" data-aos="fade-left">
+                    <form class="appointment-form" id="appointmentForm">
+                        <div class="form-group"><label for="fullName">Full Name *</label><input type="text"
+                                id="fullName" name="fullName" required></div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="phone">Phone Number *</label><input type="tel"
+                                    id="phone" name="phone" required></div>
+                            <div class="form-group"><label for="email">Email</label><input type="email" id="email"
+                                    name="email"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="gender">Gender *</label><select id="gender"
+                                    name="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select></div>
+                            <div class="form-group"><label for="age">Age *</label><input type="number" id="age"
+                                    name="age" min="1" max="120" required></div>
+                        </div>
+                        <div class="form-group"><label for="patientType">Patient Type *</label><select id="patientType"
+                                name="patientType" required>
+                                <option value="">Select Type</option>
+                                <option value="new">New Patient</option>
+                                <option value="returning">Returning Patient</option>
+                            </select></div>
+                        <div class="form-group"><label for="department">Department *</label><select id="department"
+                                name="department" required>
+                                <option value="">Select Department</option>
+                                <option value="emergency">Emergency & Trauma Care</option>
+                                <option value="maternity">Maternity & Children's Care</option>
+                                <option value="surgery">Surgery & Endoscopy</option>
+                                <option value="internal">Internal Medicine</option>
+                            </select></div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="date">Preferred Date *</label><input type="date"
+                                    id="date" name="date" required></div>
+                            <div class="form-group"><label for="time">Preferred Time *</label><input type="time"
+                                    id="time" name="time" required></div>
+                        </div>
+                        <div class="form-group"><label for="paymentMethod">Payment Method *</label><select
+                                id="paymentMethod" name="paymentMethod" required>
+                                <option value="">Select Payment Method</option>
+                                <option value="insurance">Insurance</option>
+                                <option value="cash">Cash</option>
+                                <option value="mpesa">M-Pesa</option>
+                            </select></div>
+                        <div class="form-group" id="mpesaGroup" style="display: none;"><label for="mpesaId">M-Pesa
+                                Transaction ID</label><input type="text" id="mpesaId" name="mpesaId"></div>
+                        <div class="form-group"><label for="reason">Reason for Visit *</label><textarea id="reason"
+                                name="reason" rows="4" required></textarea></div>
+                        <div class="form-disclaimer">
+                            <p><i class="fas fa-info-circle"></i> This appointment request does not guarantee
+                                confirmation until our team contacts you.</p>
+                        </div><button type="submit" class="btn btn-primary btn-lg btn-block"><span>Submit
+                                Request</span><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">NCH</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Nanyuki Cottage Hospital</span>
+                            <span class="logo-tagline">Care • Compassion • Excellence</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Providing compassionate, comprehensive healthcare services to the Nanyuki
+                        community for over 40 years. Your health is our priority.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-emergency.html">Emergency Care</a></li>
+                        <li><a href="services.html">Maternity Services</a></li>
+                        <li><a href="services.html">Surgery</a></li>
+                        <li><a href="services.html">Laboratory</a></li>
+                        <li><a href="services.html">Radiology</a></li>
+                        <li><a href="services.html">Home Health</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nanyuki Town<br>Laikipia County, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+254062203666">+254 (062) 203 666</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@nanyukicottagehospital.co.ke">info@nanyukicottagehospital.co.ke</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/254062203666">WhatsApp Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 Nanyuki Cottage Hospital. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Medical Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
     <a href="https://wa.me/254062203666" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
